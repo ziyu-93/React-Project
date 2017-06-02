@@ -1,0 +1,98 @@
+#news .NewContent {
+  width: 100%;
+  position: absolute;
+  top: 1.5rem;
+  bottom: 0;
+}
+
+#news .NewContent .item {
+  padding: 9px 13px;
+  height: 98px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#news .NewContent .item img {
+  width: 118px;
+  height: 100%;
+  margin-right: 9px;
+}
+
+#news .NewContent .item .content-wrap {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+#news .NewContent .item .content-wrap .fans, .time {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: 0;
+  right: auto;
+}
+
+#news .NewContent .item .content-wrap .time {
+  right: 0;
+  left: auto;
+}
+
+#news .NewContent .item .content-wrap .title {
+  font-size: 12px;
+  color: #333;
+}
+
+#news .button-box {
+  width: 100%;
+  position: absolute;
+  height: .2rem;
+  top: 0.65rem;
+}
+
+#news .button-box button {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
+}
+
+#news .button-box button:nth-of-type(2) {
+  right: 0;
+}
+
+#news .swiper-box {
+  position: relative;
+}
+
+#news .slide-box {
+  width: 100%;
+  text-align: center;
+  height: 10px;
+  position: absolute;
+  bottom: .15rem;
+}
+
+#news .slide-box span {
+  width: 20px;
+  height: 2px;
+  display: inline-block;
+  background-color: white;
+  margin: 0 5px;
+}
+
+#news .slide-box .show {
+  background-color: #ffabc8;
+}
+
+#news .swiper img {
+  width: 100%;
+}

@@ -1,0 +1,388 @@
+#mine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background: #f7f7f7;
+}
+
+#mine .banner {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#mine .banner-top {
+  height: 1.5811rem;
+  width: 100%;
+  /*background: red;*/
+  background: url("./../../../img/mine_bg.png") 0 0/cover round;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  background-repeat: round;
+}
+
+#mine .banner-top div {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#mine .banner-top img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+  margin: .11rem auto .0427rem;
+}
+
+#mine .banner-top span {
+  color: white;
+  font-size: 14px;
+  padding: 4px 14px;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 30px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+#mine .banner-top .signature {
+  color: white;
+  font-size: 14px;
+  padding: 0 25px;
+  position: absolute;
+  bottom: .0854rem;
+  z-index: 999;
+}
+
+#mine .banner-top .change-Bg-wrap {
+  position: absolute;
+  right: 13px;
+  top: 70px;
+  width: 43px;
+  height: 43px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 999;
+  left: auto;
+}
+
+#mine .banner-top .change-Bg {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#mine .banner-top .banner-top-shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: auto;
+  left: 0;
+  /*background: -webkit-gradient(linear, left top, left bottom, from(white), to(#000));
+    background: -webkit-linear-gradient(top, white, #000);
+    background: -moz-linear-gradient(top, white, #000);
+    background: -o-linear-gradient(top, white, #000);
+    background: linear-gradient(top, white, #000);*/
+  opacity: .15;
+  z-index: 100;
+  bottom: 0;
+}
+
+#mine .banner-bottom {
+  margin-top: 7px;
+}
+
+#mine .banner-bottom li {
+  height: 50px;
+  line-height: 50px;
+  padding: 13px 13px;
+  border-bottom: 1px solid #ddd;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: white;
+  font-size: 16px;
+  color: #333;
+}
+
+#mine .banner-bottom li div {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-align-items: center;
+  -o-align-items: center;
+  -ms-align-items: center;
+  -moz-align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#mine .banner-bottom li div .logo {
+  width: 33px;
+  margin-right: 15px;
+}
+
+#mine .banner-bottom .jiantou {
+  height: 100%;
+}
+
+#mine .banner-bottom .dropOut {
+  height: 50px;
+  line-height: 50px;
+  color: #f73737;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 7px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+#mine .mine-info {
+  position: relative;
+}
+
+#mine .mine-info .info-num {
+  position: absolute;
+  top: 13px;
+  right: 36px;
+  background-color: #f73737;
+  color: white;
+  height: 23px;
+  line-height: 23px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  border-radius: 999px;
+  width: 23px;
+  text-align: center;
+}
+
+#mine .drop-out-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: none;
+}
+
+#mine .drop-out-show {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+}
+
+#mine .drop-out-wrap .drop-out {
+  width: 2.9rem;
+  padding-top: .15rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: white;
+  z-index: 999;
+  height: 1.8rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#mine .drop-out-wrap h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: .23rem;
+}
+
+#mine .drop-out-wrap p {
+  margin-bottom: .35rem;
+  font-size: 18px;
+  color: #666;
+}
+
+#mine .drop-out-wrap .dropout-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#mine .drop-out-wrap .dropout-box span {
+  height: .35rem;
+  width: 0.97rem;
+  border: 1px solid #ffabc8;
+  background-color: white;
+  line-height: .35rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #ffabc8;
+  font-size: 18px;
+}
+
+#mine .drop-out-wrap .dropout-box .bgcolor {
+  color: white;
+  background-color: #ffabc8;
+  border: 1px solid #ffabc8;
+}
+
+#mine .drop-out-show .drop-out {
+  width: 2.9rem;
+  padding-top: .15rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: white;
+  z-index: 999;
+  height: 1.8rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#mine .drop-out-show h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: .23rem;
+}
+
+#mine .drop-out-show p {
+  margin-bottom: .35rem;
+  font-size: 18px;
+  color: #666;
+}
+
+#mine .drop-out-show .dropout-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#mine .drop-out-show .dropout-box span {
+  height: .35rem;
+  width: 0.97rem;
+  border: 1px solid #ffabc8;
+  background-color: white;
+  line-height: .35rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #ffabc8;
+  font-size: 18px;
+}
+
+#mine .drop-out-show .dropout-box .bgcolor {
+  color: white;
+  background-color: #ffabc8;
+  border: 1px solid #ffabc8;
+}
+
+#mine .bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+#mine .bg-box {
+  position: absolute;
+  bottom: 0;
+  height: 94px;
+  background: #f7f7f7;
+  text-align: center;
+  top: auto;
+  width: 100%;
+}
+
+#mine .bg-box div {
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+  position: relative;
+}
+
+#mine .bg-box div:nth-of-type(2) {
+  border: 0;
+  margin-top: 6px;
+}
+
+#mine .bg-box .box-close span {
+  color: red;
+}
+
+#mine .bg-box .box-top input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

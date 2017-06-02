@@ -1,0 +1,46 @@
+{
+  "name": "fans",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "enzyme": "^2.8.2",
+    "es5-shim": "^4.5.9",
+    "es6-promise": "^4.1.0",
+    "fetch-detector": "^1.0.1",
+    "fetch-ie8": "^1.5.0",
+    "fetch-jsonp": "^1.0.6",
+    "fetch-polyfill": "^0.8.2",
+    "isomorphic-fetch": "^2.2.1",
+    "npmignore": "^0.2.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-swipe": "^5.0.8",
+    "react-swiper": "^0.1.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "swipe-js-iso": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "rules": {
+    "indent": 1,
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-indent-props": 1,
+    "react/jsx-indent": 1
+  }
+}
