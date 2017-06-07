@@ -2,9 +2,9 @@ import { Header, Content, Logo } from "./../../../public/public.js";
 import React, { Component } from "react"
 import { Link } from "react-router-dom";
 import "./../css/mine.css"
-import { findDOMNode } from "react-dom";
+// import { findDOMNode } from "react-dom";
 import fetch from "isomorphic-fetch";
-import createStore from 'redux';
+// import createStore from 'redux';
 export default class Mine extends Component {
   static defaultProps = {}
   render() {
@@ -140,26 +140,26 @@ class MineBg extends Component {
 
 
 
-    const defaultState = 0;
-    const chatReducer = (state = defaultState, action) => {
-      const {type, payload} = action;
-      switch (type) {
-        case 'ADD_CHAT':
-          return Object.assign({}, state, {
-            chatLog: state.chatLog.concat(payload)
-          });
-        case 'CHANGE_STATUS':
-          return Object.assign({}, state, {
-            statusMessage: payload
-          });
-        case 'CHANGE_USERNAME':
-          return Object.assign({}, state, {
-            userName: payload
-          });
-        default:
-          return state;
-      }
-    };
+  // const defaultState = 0;
+  // const chatReducer = (state = defaultState, action) => {
+  //   const {type, payload} = action;
+  //   switch (type) {
+  //     case 'ADD_CHAT':
+  //       return Object.assign({}, state, {
+  //         chatLog: state.chatLog.concat(payload)
+  //       });
+  //     case 'CHANGE_STATUS':
+  //       return Object.assign({}, state, {
+  //         statusMessage: payload
+  //       });
+  //     case 'CHANGE_USERNAME':
+  //       return Object.assign({}, state, {
+  //         userName: payload
+  //       });
+  //     default:
+  //       return state;
+  //   }
+  // };
   }
 
   render() {
@@ -265,20 +265,20 @@ class MineContent extends Component {
   }
 }
 
-class ChangeBg extends Component {
-  render() {
-    return (
-      <div className="bg-wrap">
-        <div className="bg-box">
-          <div className="box-top">
-            <span>相册</span>
-            <input type="file"/>
-          </div>
-          <div className="box-close">
-            <span>取消</span>
-          </div>
-        </div>
-      </div>
-    )
-  }
-}
+// class ChangeBg extends Component {
+//   render() {
+//     return (
+//       <div className="bg-wrap">
+//         <div className="bg-box">
+//           <div className="box-top">
+//             <span>相册</span>
+//             <input type="file"/>
+//           </div>
+//           <div className="box-close">
+//             <span>取消</span>
+//           </div>
+//         </div>
+//       </div>
+//     )
+//   }
+// }

@@ -19,12 +19,30 @@ export default class NewDetail extends Component {
 
 class NewDetailContent extends Component {
   state = {
-    current: []
+    current: ""
   }
   componentWillMount() {
-    fetch("./data/new.json").then(res => res.json())
-      .then(data => console.log(data)).catch(e => console.error("Feach error", e));
+    // fetch('https://github.com/ziyu-93/React-Project/blob/master/data/new.json', {
+    //   method: "POST",
+    //   mode: "no-cors",
+    //   redirect: 'follow',
+    //   headers: {
+    //     "Content-Type": "application/plain"
+    //   }
+    // }).then(res => res)
+    //   .then(data => console.log(data)).catch(e => console.error("Feach error", e));
+    fetch("https://api.myjson.com/bins/16gtop").then(res => res.json())
+      .then(data => {
+        console.log(data.news);
+        this.setState({
+          current: [1, 2, 2, 22]
+        })
+
+      })
+      .catch(e => console.log("Fetch error", e));
+  //let a = this.props.params.newsId;
   }
+
   render() {
     return (
       <div className="banner">

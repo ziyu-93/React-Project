@@ -1,23 +1,55 @@
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -moz-box-sizing:border-box; /* Firefox */
-    /*-webkit-touch-callout:none; 阻止长按图片之后呼出菜单提示复制的行为*/
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  /*-webkit-touch-callout:none; 阻止长按图片之后呼出菜单提示复制的行为*/
 }
 
 html {
-    height: 100%;
-    width: 100%;
-    font-size: 31.25vw;
+  height: 100%;
+  width: 100%;
+  font-size: 31.25vw;
 }
+
+
+/*html {
+  font-size: 17px;
+}*/
+
+
+/*
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  html {
+    font-size: 21px !important;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 22px !important;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 25px !important;
+  }
+}*/
 
 
 /*@media（min-device-width: 375px) and (max-device-width:667px) and (-webkit-min-device-pixel-ratio:2) {
@@ -33,96 +65,219 @@ html {
 }*/
 
 body {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    font-size: 12px;
-    overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 12px;
+  overflow: hidden;
 }
 
 body {
-    font-weight: 200;
-    font-family: "微软雅黑";
+  font-weight: 200;
+  font-family: "Helvetica Neue", "Helvetica", "STHeiTi", "Heiti SC", "sans-serif", 'Microsoft YaHei';
+  /*font-family: "微软雅黑"*/
 }
 
-input::-webkit-input-placeholder {
-    /* WebKit browsers */
-    color: #ccc;
-}
-
-input:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: #ccc;
-}
-
-input::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: #ccc;
-}
-
-input:-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    color: #ccc;
+#root, #page {
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: 600
+  font-size: inherit;
+  font-weight: 600
 }
 
 img {
-    border: 0;
-    vertical-align: top
+  border: 0;
+  vertical-align: top
 }
 
 li {
-    list-style: none
+  list-style: none
 }
 
 input, textarea {
-    border: none;
-    background: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 input, textarea, select {
-    border: 0;
-    outline: none;
-    padding: 0;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
+  border: 0;
+  outline: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 button, input[type="submit"] {
-    border: none;
-    background: none;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    outline: none;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
 a {
-    touch-callout: none;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    color: #333
+  touch-callout: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: #333
 }
 
 i, em {
-    font-style: normal
+  font-style: normal
 }
 
 textarea {
-    resize: none
+  resize: none
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner, textarea::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
+}
+
+.chaochu_1 {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word
+}
+
+.chaochu_2 {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word
+}
+
+.chaochu_3 {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: none;
+}*/
+
+
+/*::-webkit-input-placeholder {
+  color: inherit;
+  color: red;
+}
+
+::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+  color: red;
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+  color: red;
+}*/
+
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ccc;
+}
+
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: red;
+}
+
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: red;
+}
+
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: red;
+}
+
+.bg {
+  background-color: #f7f7f7 !important;
+}
+
+.h {
+  height: 100%;
+}
+
+.w {
+  width: 100%;
+}
+
+.col {
+  color: #34a0df!important;
+}
+
+.mg-r {
+  margin-right: 2px
+}
+
+.flt-r {
+  float: right;
+}
+
+.flt-l {
+  float: left;
+}
+
+.flex-row-bt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.flex-row-ar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.disBlock {
+  display: block!important;
+}
+
+.disNone {
+  display: none!important;
 }

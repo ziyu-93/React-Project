@@ -8,19 +8,19 @@ import querystring from "querystring";
 import fetch from "isomorphic-fetch";
 
 const query = querystring.parse(window.location.search.slice(1));
-
+//console.log(window.location.search);
 const numberOfSlides = parseInt(query.slidesNum, 10) || 3;
 //parseInt (string,进制数2~32) 产生出来的整数，十位乘进制数，加上个位的数字。
 const paneNodes = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
   return (
-    <Link key={i} to={"/new/2"}><div className="swiper-slide"><img src="./img/brokeNew_loop.png" alt=""/></div></Link>
+    <Link key={i} to={"/new/" + (i * 1 + 1) + ""}><div className="swiper-slide"><img src="./img/brokeNew_loop.png" alt=""/></div></Link>
   )
 });
-const swipeSlide = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
-  return (
-    <span key={i}></span>
-  )
-});
+// const swipeSlide = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
+//   return (
+//     <span key={i}></span>
+//   )
+// });
 
 const startSlide = parseInt(query.startSlide, 10) || 0;
 
@@ -121,7 +121,7 @@ class NewContent extends Component {
             {
       this.state.data.map((e, i) => {
         return (
-          <Link to={"/new/" + e.newsId + ""} key={i}>
+          <Link to={`/new/${e.newsId}`} key={i}>
              <div className="item">
                <div>
                    <img src={e.img} alt=""/>

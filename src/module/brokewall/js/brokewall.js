@@ -5,7 +5,6 @@ import "./../css/brokewall.css";
 import { Link } from "react-router-dom";
 import ReactSwipe from "react-swipe";
 import PropTypes from "prop-types";
-import Swipe from 'swipe-js-iso';
 import fetch from 'isomorphic-fetch';
 export default class BrokeWall extends Component {
   static defaultProps = {}
@@ -55,7 +54,7 @@ class Swiper extends Component {
     current: 0
   }
   componentDidMount() {
-    const {swipeOptions} = this.props;
+    // const {swipeOptions} = this.props;
     //this.swipe = Swipe(this.refs.reactSwipe, swipeOptions);
     //console.log(Swipe(this));
     console.log(this.props);

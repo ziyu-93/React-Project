@@ -70,26 +70,34 @@ class Bottom extends Component {
   render() {
     return (
       <div className="bottom">
-                <img className="bottom-left" src="./../img/new_detail_assess.png" alt=""/>
-                <img className="bottom-right" src="./../img/new_detail_zhuanfabt.png" alt=""/>
-            </div>
+          <img className="bottom-left" src="./../img/new_detail_assess.png" alt=""/>
+          <img className="bottom-right" src="./../img/new_detail_zhuanfabt.png" alt=""/>
+      </div>
     )
   }
 }
-
-class Logo extends Component {
-  render() {
-    return (
-      <div className="object-logo">
-                <img src="./img/logo.png" className="logo-img" alt=""/>
-                <div className="sign-wrap">
-                    <img src="./img/sign_in_logo.png" alt=""/>
-                    <span>请登录</span>
-                </div>
-            </div>
-    )
-  }
-}
+const Logo = () => (
+  <div className="object-logo">
+      <img src="./img/logo.png" className="logo-img" alt=""/>
+      <div className="sign-wrap">
+          <img src="./img/sign_in_logo.png" alt=""/>
+          <Link to={"/user"}><span>请登录</span></Link>
+      </div>
+  </div>
+)
+// class Logo extends Component {
+//   render() {
+//     return (
+//       <div className="object-logo">
+//           <img src="./img/logo.png" className="logo-img" alt=""/>
+//           <div className="sign-wrap">
+//               <img src="./img/sign_in_logo.png" alt=""/>
+//               <Link to={"/user"}><span>请登录</span></Link>
+//           </div>
+//       </div>
+//     )
+//   }
+// }
 class SubHeader extends Component {
   goBack() {
     window.history.go(-1);
@@ -98,14 +106,89 @@ class SubHeader extends Component {
   render() {
     return (
       <div className="sub-header">
-                <div className="sub-header-wrap">
-                    <img className="sub-header-back" src="./../img/back.png" alt="" onClick={() => this.goBack()}/>
-                    <p className="sub-header-text">{this.props.text}</p>
-                </div>
-            </div>
+          <div className="sub-header-wrap">
+              <img className="sub-header-back" src="./../../img/back.png" alt="" onClick={() => this.goBack()}/>
+              <p className="sub-header-text">{this.props.text}</p>
+          </div>
+      </div>
     )
   }
 }
-;
-
-export { Header, Bottom, Content, Logo, SubHeader }
+//title and nav
+class TitleNav extends Component {
+  render() {
+    return (
+      <div className="banner-title-wrap">
+          <div className="banner-title">
+              <div className="banner-title-text">
+                  <span>{this.props.name}</span>
+                  <div className="banner-title-rigth">
+                      <span className="banner-title-more"><a href={this.props.location}>更多</a></span>
+                      <img className="banner-title-img" src="./../img/yule_jiantou.png" alt=""/>
+                  </div>
+              </div>
+          </div>
+      </div>
+    )
+  }
+}
+//list left and right
+class ListLeft extends Component {
+  state = {
+    show: this.props.listName === "variety" ? "大陆综艺" : "全部分类"
+  }
+  switchShow(i) {
+    this.setState({
+      show: this.props.ListLeft[i]
+    })
+  }
+  render() {
+    return (
+      <section className="ListLeft" style={{
+        height: "100%"
+      }}>
+        <ul className="banner-left">
+          {
+      this.props.ListLeft.map((e, i) => {
+        return (
+          <Link to={"/entertainment/" + this.props.listName + ""} key={i}>
+            <li className={this.state.show === e ? "banner-left-show banner-left-item" : "banner-left-item"} onClick={() => this.switchShow(i)}>
+                  <span>{e}</span>
+                </li></Link>
+        )
+      })
+      }
+        </ul>
+      </section>
+    )
+  }
+}
+//list right
+class ListRight extends Component {
+  switchShow() {
+    console.log(123);
+  }
+  render() {
+    return (
+      <section className="ListRight banner-rigth" style={{
+        height: "100%",
+        width: "2.26rem"
+      }}>
+        <ul className="banner-list">
+          {
+      this.props.ListRight.map((e, i) => {
+        return (
+          <li className="banner-right-item" key={i}>
+                <Link to={"/entertainment/movie/" + e.movieId + ""}><img src={e.img} alt=""/>
+                <p className="item-name chaochu_1">{e.name}</p>
+                <p className="item-star chaochu_1">{e.star}</p></Link>
+            </li>
+        )
+      })
+      }
+        </ul>
+      </section>
+    )
+  }
+}
+export { Header, Bottom, Content, Logo, SubHeader, TitleNav, ListLeft, ListRight }

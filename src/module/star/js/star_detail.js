@@ -1,16 +1,18 @@
 import { SubHeader, Content } from "./../../../public/public.js";
-import React, { Component } from "react"
-import "./../css/starDetail.css"
+import React, { Component } from "react";
+import "./../css/starDetail.css";
+import { Link } from "react-router-dom";
+
 export default class StarDetail extends Component {
   static defaultProps = {}
   render() {
     return (
-      <div id="star">
-                <SubHeader text={"明星详情"}></SubHeader>
-                <Content haveTop={false} haveBottom={false}>
-                    <StarDetailContent/>
-                </Content>
-            </div>
+      <div id="starDetail">
+            <SubHeader text={"明星详情"}></SubHeader>
+            <Content haveTop={false} haveBottom={false}>
+                <StarDetailContent/>
+            </Content>
+        </div>
     )
   }
 }
@@ -36,7 +38,7 @@ class StarDetailContent extends Component {
                     <div className="star-main">
                         <p className="star-introduction">简介:</p>
                         <p className="star-text">王丽坤,中国内地女演员,出生于内蒙古赤峰。王丽坤,中国内地女演员,出生于内蒙古赤峰。王丽坤,中国内地女演员,出生于内蒙古赤峰。</p>
-                        <p className="star-more"><a href="./../main/star_introduction.html">查看详情</a></p>
+                        <p className="star-more"><Link to={"/star/" + 1 + "/starIntro"}>查看详情</Link></p>
                     </div>
                 </div>
             </div>

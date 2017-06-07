@@ -1,6 +1,6 @@
 import { SubHeader, Content } from "./../../../public/public.js";
 import React, { Component } from "react"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./../css/mine_info.css"
 export default class MineInfo extends Component {
   render() {

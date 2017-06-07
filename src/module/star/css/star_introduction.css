@@ -1,0 +1,71 @@
+#introduction {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#introduction .banner-top {
+  width: 100%;
+  padding: 10px 13px 20px;
+  background: url("./../../../img/star_introduction.png") no-repeat 0 0;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#introduction .banner-top-head {
+  text-align: center;
+}
+
+#introduction .banner-top-head img {
+  display: inline-block;
+  width: 60px;
+}
+
+#introduction .banner-top-head p {
+  font-size: 16px;
+  color: white;
+}
+
+#introduction .banner-top-text {
+  font-size: 12px;
+  color: white;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#introduction .banner-top-text .text-left {
+  width: 1.8rem;
+}
+
+#introduction .banner-bottom {
+  padding: 0 13px;
+  font-size: 12px;
+  color: #333;
+}
+
+#introduction .banner-bottom img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#introduction .banner-bottom p {
+  margin: 18px 0;
+  text-indent: 24px;
+}

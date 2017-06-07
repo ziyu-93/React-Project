@@ -1,0 +1,113 @@
+{
+  "star": [{
+      "img": "./img/star_name1.png",
+      "name": "鹿晗",
+      "starId": "1"
+    },
+    {
+      "img": "./img/star_name2.png",
+      "name": "王丽坤",
+      "starId": "2"
+    },
+    {
+      "img": "./img/star_name3.png",
+      "name": "许嵩",
+      "starId": "3"
+    },
+    {
+      "img": "./img/star_name4.png",
+      "name": "张韶涵",
+      "starId": "4"
+    },
+    {
+      "img": "./img/star_name5.png",
+      "name": "Anglebaby",
+      "starId": "5"
+    },
+    {
+      "img": "./img/star_name6.png",
+      "name": "TFboys",
+      "starId": "6"
+    },
+    {
+      "img": "./img/star_name1.png",
+      "name": "鹿晗",
+      "starId": "7"
+    },
+    {
+      "img": "./img/star_name2.png",
+      "name": "鹿晗",
+      "starId": "8"
+    },
+    {
+      "img": "./img/star_name3.png",
+      "name": "鹿晗",
+      "starId": "9"
+    },
+    {
+      "img": "./img/star_name4.png",
+      "name": "鹿晗",
+      "starId": "10"
+    },
+    {
+      "img": "./img/star_name5.png",
+      "name": "鹿晗",
+      "starId": "11"
+    },
+    {
+      "img": "./img/star_name6.png",
+      "name": "鹿晗",
+      "starId": "12"
+    },
+    {
+      "img": "./img/star_name1.png",
+      "name": "鹿晗",
+      "starId": "13"
+    },
+    {
+      "img": "./img/star_name2.png",
+      "name": "鹿晗",
+      "starId": "14"
+    },
+    {
+      "img": "./img/star_name3.png",
+      "name": "鹿晗",
+      "starId": "15"
+    },
+    {
+      "img": "./img/star_name4.png",
+      "name": "鹿晗",
+      "starId": "16"
+    },
+    {
+      "img": "./img/star_name5.png",
+      "name": "鹿晗",
+      "starId": "17"
+    },
+    {
+      "img": "./img/star_name6.png",
+      "name": "鹿晗",
+      "starId": "18"
+    },
+    {
+      "img": "./img/star_name1.png",
+      "name": "鹿晗",
+      "starId": "19"
+    },
+    {
+      "img": "./img/star_name2.png",
+      "name": "鹿晗",
+      "starId": "20"
+    },
+    {
+      "img": "./img/star_name3.png",
+      "name": "鹿晗",
+      "starId": "21"
+    },
+    {
+      "img": "./img/star_name4.png",
+      "name": "鹿晗",
+      "starId": "22"
+    }
+  ]
+}
