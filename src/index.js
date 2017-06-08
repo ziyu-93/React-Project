@@ -14,6 +14,11 @@ import EnterVarietyDetail from "./module/entertainment/js/entertainment_variety_
 import BrokeWall from "./module/brokewall/js/brokewall.js";
 import Mine from "./module/mine/js/mine.js";
 import MineInfo from "./module/mine/js/mine_info.js";
+import MineMessage from "./module/mine/js/mine_message.js";
+import MineChangeName from "./module/mine/js/mine_infoName.js";
+import MineSignature from "./module/mine/js/mine_signature.js";
+import MineLocation from "./module/mine/js/mine_location.js";
+import MineEmail from "./module/mine/js/mine_mailbox.js";
 import NewDetail from "./module/news/js/new_detail.js";
 import BrokePic from "./module/brokewall/js/brokewallPic.js";
 import SignIn from "./module/user/js/sign_in.js";
@@ -44,6 +49,11 @@ ReactDOM.render(
       <Route exact path="/brokewall" component={BrokeWall}/>
       <Route exact path="/mine" component={Mine}/>
       <Route exact path="/mine/info" component={MineInfo}/>
+      <Route exact path="/mine/message" component={MineMessage}/>
+      <Route exact path="/mine/name" component={MineChangeName}/>
+      <Route exact path="/mine/signature" component={MineSignature}/>
+      <Route exact path="/mine/location" component={MineLocation}/>
+      <Route exact path="/mine/email" component={MineEmail}/>
       <Route exact path="/user" component={SignIn}/>
       <Route exact path="/user/sign_up" component={SignUp}/>
       <Route exact path="/user/forgetPs" component={ForgetPs}/>

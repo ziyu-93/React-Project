@@ -212,3 +212,54 @@
   top: -5px;
   right: 7px;
 }
+
+.uploader-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  display: none;
+}
+
+.uploader-list {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+}
+
+.uploader-list div {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  width: 100%;
+}
+
+.uploader-list span {
+  height: 40px;
+  color: red;
+  text-align: center;
+  width: 100%;
+  display: block;
+  background-color: white;
+  line-height: 40px;
+}
+
+.uploader-list .close-send {
+  margin-top: 5px;
+}
+
+.uploader-list input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+}

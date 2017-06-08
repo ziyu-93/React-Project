@@ -1,5 +1,9 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {
+  Component
+} from "react";
+import {
+  Link
+} from "react-router-dom";
 import "./public.css";
 
 class Header extends Component {
@@ -191,4 +195,39 @@ class ListRight extends Component {
     )
   }
 }
-export { Header, Bottom, Content, Logo, SubHeader, TitleNav, ListLeft, ListRight }
+//上传图片
+class Upimg extends Component {
+  render() {
+    return (
+      <div className={this.props.status}>
+          <div className="uploader-list bg">
+
+              <div className="file-wrap">
+                  拍照
+                  <input type="file" accept="image/*;capture=camcorder"/>
+                  { /* <!-- multiple多张上传属性 --> */ }
+              </div>
+
+              <div className="file-wrap">
+                  上传图片
+                  <input id="upload_image" type="file" accept="image/*;capture=camera"/>
+              </div>
+
+              <span className="close-send">取消</span>
+
+          </div>
+      </div>
+    )
+  }
+}
+export {
+  Header,
+  Bottom,
+  Content,
+  Logo,
+  SubHeader,
+  TitleNav,
+  ListLeft,
+  ListRight,
+  Upimg
+}

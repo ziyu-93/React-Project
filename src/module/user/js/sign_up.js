@@ -57,7 +57,7 @@ class SignUpContent extends Component {
           </div>
           <div className="banner-bottome">
               <div className="bottom-sign-in">
-                  <span className="no-number">已有账号？</span><a href="/user/sign_in"><span className="sign-in">立即登录</span></a>
+                  <span className="no-number">已有账号？</span><a href="/user"><span className="sign-in">立即登录</span></a>
               </div>
           </div>
       </div>

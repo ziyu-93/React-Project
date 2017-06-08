@@ -1,10 +1,11 @@
 import { Header, Content, Logo } from "./../../../public/public.js";
 import React, { Component } from "react"
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./../css/mine.css"
 // import { findDOMNode } from "react-dom";
 import fetch from "isomorphic-fetch";
 // import createStore from 'redux';
+
 export default class Mine extends Component {
   static defaultProps = {}
   render() {
@@ -21,14 +22,17 @@ export default class Mine extends Component {
   }
 }
 
+// const MineRoute = () => (
+//   <Router>
+//     <div>
+//       <Route exact path="/mine" component={Home}/>
+//       <Route path="/mine/info" component={About}/>
+//       <Route path="/mine/message" component={Topics}/>
+//     </div>
+//   </Router>
+// )
 class MineBg extends Component {
   componentWillMount() {
-    // fs.readFile('/etc/passwd', function(err, data) {
-    //   if (err)
-    //     throw err;
-    //   console.log(data);
-    // });
-    // Promise
     function timeout(ms) {
       return new Promise((resolve, reject) => {
         setTimeout(resolve, ms, 'done');
@@ -60,11 +64,6 @@ class MineBg extends Component {
       })
       return promise;
     };
-    // getJSON("./data.json").then((json) => {
-    //   console.log(json);
-    // }), (error) => {
-    //   console.error('出错了', error)
-    // }
     getJSON("./data.json").then(
       json => console.log(json)
     ).catch(error => console.log(error));
@@ -94,49 +93,49 @@ class MineBg extends Component {
         console.log(error)
       });
 
-    // const defaultState = 0;
-    // const reducer = (state = defaultState, action) => {
-    //   switch (action.type) {
-    //     case 'ADD':
-    //       return state + action.payload;
-    //     default:
-    //       return state;
-    //   }
-    //
-    // };
-    // const state = reducer(1, {
-    //   type: 'ADD',
-    //   payload: 2
-    // })
-    // console.log(state);
-    var o1 = {
-      a: 1
-    };
-    var o2 = {
-      b: 2
-    };
-    var o3 = {
-      c: 3
-    };
-
-    var obj = Object.assign(o1, o2, o3);
-    console.log(obj); // { a: 1, b: 2, c: 3 }
-    console.log(o1);
-
-    let target = Object.defineProperty({}, 'foo', {
-      value: 1,
-      //写入，或者只读，bol控制
-      writable: true
-    });
-    console.log(target);
-    Object.assign(target, {
-      bar: 2
-    });
-    console.log(target);
-    Object.assign(target, {
-      foo: 2
-    })
-    console.log(target);
+      // const defaultState = 0;
+      // const reducer = (state = defaultState, action) => {
+      //   switch (action.type) {
+      //     case 'ADD':
+      //       return state + action.payload;
+      //     default:
+      //       return state;
+      //   }
+      //
+      // };
+      // const state = reducer(1, {
+      //   type: 'ADD',
+      //   payload: 2
+      // })
+      // console.log(state);
+      // var o1 = {
+      //   a: 1
+      // };
+      // var o2 = {
+      //   b: 2
+      // };
+      // var o3 = {
+      //   c: 3
+      // };
+      //
+      // var obj = Object.assign(o1, o2, o3);
+      // console.log(obj); // { a: 1, b: 2, c: 3 }
+      // console.log(o1);
+      //
+      // let target = Object.defineProperty({}, 'foo', {
+      //   value: 1,
+      //   //写入，或者只读，bol控制
+      //   writable: true
+      // });
+      // console.log(target);
+      // Object.assign(target, {
+      //   bar: 2
+      // });
+      // console.log(target);
+      // Object.assign(target, {
+      //   foo: 2
+      // })
+      // console.log(target);
 
 
 
@@ -163,12 +162,12 @@ class MineBg extends Component {
   }
 
   render() {
-    const Counter = ({value}) => (
-      <h1>{value}</h1>
-    )
+    // const Counter = ({value}) => (
+    //   <h1>{value}</h1>
+    // )
     return (
       <div className="banner-top">
-        <Counter value="你好啊"></Counter>
+        { /* <Counter value="你好啊"></Counter> */ }
         <div>
           <img src="./img/王宝强头像.png" alt=""/>
           <span className="name">夏天</span>
@@ -201,51 +200,31 @@ class MineContent extends Component {
     fetch("./data/data.json").then(res => res.json())
       .then(data => console.log(data.news))
       .catch(e => console.log("Fetch failed!", e))
-  // fetch("/data.json").then(function(res) {
-  //   // res instanceof Response == true.
-  //   if (res.ok) {
-  //     res.json().then(function(data) {
-  //       console.log(data);
-  //     });
-  //   } else {
-  //     console.log("Looks like the response wasn't perfect, got status", res.status);
-  //   }
-  // }, function(e) {
-  //   console.log("Fetch failed!", e);
-  // });
   }
   render() {
+    const NavList = ({wrap, icon, title, num}) => (
+      <li className={wrap}>
+        <div>
+          <img className="logo" src={icon} alt=""/>
+          <span>{title}</span>
+        </div>
+        <span className="info-num">{num}</span>
+        <img className="jiantou" src="./img/yule_jiantou.png" alt=""/>
+      </li>
+    )
     return (
       <div className="banner-bottom">
         <ul>
           <Link to={"/mine/info"}>
-            <li className="change-mine-data">
-              <div>
-                <img className="logo" src="./img/mine_mine.png" alt=""/>
-                <span>修改个人资料</span>
-              </div>
-              <img className="jiantou" src="./img/yule_jiantou.png" alt=""/></li>
+              <NavList wrap="change-mine-data" icon="./img/mine_mine.png" title="修改个人资料"/>
           </Link>
-          <li className="mine-info">
-            <div>
-              <img className="logo" src="./img/mine_newinfo.png" alt=""/>
-              <span>我的消息</span>
-            </div>
-            <span className="info-num">20</span>
-            <img className="jiantou" src="./img/yule_jiantou.png" alt=""/></li>
-          <li className="mine-store">
-            <div>
-              <img className="logo" src="./img/mine_store.png" alt=""/>
-              <span>我的收藏</span>
-            </div>
-
-            <img className="jiantou" src="./img/yule_jiantou.png" alt=""/></li>
-          <li className="mine-send">
-            <div>
-              <img className="logo" src="./img/mine_send.png" alt=""/>
-              <span>我的发布</span>
-            </div>
-            <img className="jiantou" src="./img/yule_jiantou.png" alt=""/></li>
+          <Link to={"/mine/message"}>
+            <NavList wrap="mine-info" icon="./img/mine_newinfo.png" title="我的消息" num="20"/>
+          </Link>
+          <Link to={"/mine/infoName"}>
+            <NavList wrap="mine-store" icon="./img/mine_store.png" title="我的收藏"/>
+          </Link>
+            <NavList wrap="mine-send" icon="./img/mine_send.png" title="我的发布"/>
         </ul>
         <p className="dropOut" onClick={() => this.dropOut()}>退出登录</p>
         <div className={this.state.show === 0

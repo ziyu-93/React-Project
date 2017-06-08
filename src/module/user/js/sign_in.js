@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./../css/sign_in.css";
-let input = require("react-input-placeholder");
-// input.placeholder {
-//   color: gray
-// };
+// import Radium, { Style } from 'radium';
+
 //create SignIn
 export default class SignIn extends Component {
   render() {
@@ -15,6 +13,31 @@ export default class SignIn extends Component {
   }
 }
 
+// let styles = {
+//   base: {
+//     'WebkitInputPlaceholder': {
+//       color: "red"
+//     }
+//   }
+// }
+{
+  /* <Style scopeSelector='.number' rules={{
+  '::-webkit-input-placeholder': {
+  color: placeholderColor,
+  background: "red"
+  },
+  ':-moz-placeholder': {
+  color: placeholderColor
+  },
+  '::-moz-placeholder': {
+  color: placeholderColor
+  },
+  ':-ms-input-placeholder': {
+  color: placeholderColor
+  }
+  }} /> */
+}
+// let placeholderColor = "#ccc";
 //create SignInContent
 class SignInContent extends Component {
   state = {
@@ -64,6 +87,13 @@ class SignInContent extends Component {
       window.location.href = "/user/signIn";
     }
   }
+  focus(e) {
+    this.refs.number.value === "手机号码" ? this.refs.number.value = "" : this.refs.number.value = e.target.value
+  }
+  blur(e) {
+    this.refs.number.value === "" ? this.refs.number.value = this.refs.number.defaultValue : this.refs.number.value = e.target.value
+
+  }
   render() {
     return (
       <div className="content">
@@ -72,9 +102,13 @@ class SignInContent extends Component {
                 <div className="main-number">
                     <label ref="numCorrectNum">
                       <img src="./../img/sign_up_number.png" alt="" />
-                      <input ref="number" onChange={(e) => this.changeNum(e)} className="number" type="text" placeholder="手机号码" maxLength="11"/>
+                      <input ref="number" onChange={(e) => this.changeNum(e)} onFocus={(e) => this.focus(e)} onBlur={(e) => this.blur(e)} className="number" type="text" defaultValue="手机号码" maxLength="11" />
+
                       <img className="true" src="./../img/sign_up_corrent.png" alt="" />
+
                     </label>
+
+
                 </div>
                 <div className="main-password">
                     <label ref="numCorrectPs">
@@ -85,6 +119,7 @@ class SignInContent extends Component {
                 </div>
                 <div className="main-forget-password">
                     <span onClick={() => this.checkPs()}>查看密码</span><a href="/user/forgetPs">忘记密码？</a>
+
                 </div>
                 <div className="main-sign-in" onClick={() => this.signIn()}>
                     <span>登录</span>

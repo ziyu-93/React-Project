@@ -1,19 +1,21 @@
-#MineInfo{
+#MineInfo {
   position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-    bottom: 0;
-background-color: #f7f7f7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #f7f7f7;
 }
+
 #MineInfo .banner {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 7px 0;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 7px 0;
+  bottom: 0;
 }
-#MineInfo .banner-list li{
+
+#MineInfo .banner-list li {
   height: 50px;
   width: 100%;
   background-color: white;
@@ -34,63 +36,71 @@ background-color: #f7f7f7;
   -ms-align-items: center;
   -o-align-items: center;
   -webkit-box-align: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 14px;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   -webkit-box-pack: justify;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-#MineInfo .banner-list li:nth-of-type(1){
+
+#MineInfo .banner-list .list-head {
   height: 60px;
 }
-#MineInfo .banner-list div{
+
+#MineInfo .banner-list div {
   height: 100%;
 }
-#MineInfo .banner-list div img{
+
+#MineInfo .banner-list div img {
   height: 100%;
-      margin-left: 10px;
+  margin-left: 10px;
 }
-#MineInfo .list-head img{
+
+#MineInfo .list-head img {
   width: 45px;
   height: 45px;
--webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-        border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
+
 #MineInfo .list-birthday {
   margin-top: 7px;
 }
+
 input::-webkit-input-placeholder {
-    /* WebKit browsers */
-    color: #333;
+  /* WebKit browsers */
+  color: #333;
 }
 
 input:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: #333;
+  /* Mozilla Firefox 4 to 18 */
+  color: #333;
 }
 
 input::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: #333;
+  /* Mozilla Firefox 19+ */
+  color: #333;
 }
 
 input:-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    color: #333;
+  /* Internet Explorer 10+ */
+  color: #333;
 }
-#MineInfo .list-birthday #getTime{
+
+#MineInfo .list-birthday #getTime {
   text-align: right;
-  color:#333;
+  color: #333;
 }
-#MineInfo .gender-choose{
+
+#MineInfo .gender-choose {
   position: absolute;
   top: 0;
   left: 0;
@@ -100,7 +110,8 @@ input:-ms-input-placeholder {
   display: none;
   z-index: 999;
 }
-#MineInfo .gender-wrap{
+
+#MineInfo .gender-wrap {
   width: 80%;
   height: 200px;
   background-color: white;
@@ -111,15 +122,17 @@ input:-ms-input-placeholder {
   right: 0;
   margin: auto;
   -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
-#MineInfo .gender-wrap img{
+
+#MineInfo .gender-wrap img {
   width: 80px;
   height: 80px;
   margin-top: 22px;
 }
-#MineInfo .wrap-top{
+
+#MineInfo .wrap-top {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -135,141 +148,105 @@ input:-ms-input-placeholder {
   -ms-justify-content: space-around;
   -o-justify-content: space-around;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-#MineInfo .make-sure{
+
+#MineInfo .make-sure {
   width: 85px;
   margin: 27px auto 0;
   background-color: #ffabc8;
-  color:white;
+  color: white;
   font-size: 18px;
   -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   height: 37px;
   text-align: center;
   line-height: 37px;
 }
-#MineInfo .uploader-wrap{
+
+#MineInfo .time-choose {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
   display: none;
 }
-#MineInfo .uploader-list {
+
+#MineInfo .time-choose .time-choose-wrap {
+  width: 3rem;
+  height: 327px;
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#MineInfo .time-choose .time-choose-wrap .top {
+  height: 47px;
+  line-height: 47px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#MineInfo .time-choose .time-choose-wrap .bottom {
   position: absolute;
   bottom: 0;
-  top: auto;
+  height: 55px;
+  line-height: 55px;
+  border-top: 1px solid #ddd;
   width: 100%;
-}
-#MineInfo .uploader-list div{
-  height: 40px;
-  line-height: 40px;
+  font-size: 18px;
   text-align: center;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
-  position: relative;
-  width: 100%;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-#MineInfo .uploader-list span{
-  height: 40px;
-  color:red;
-  text-align: center;
-  width: 100%;
-  display: block;
-  background-color: white;
-  line-height: 40px;
 
-}
-#MineInfo .uploader-list input{
-  position: absolute;
-left: 0;
-top: 0;
-width: 100%;
-opacity: 0;
-height: 100%;
-}
-#MineInfo .time-choose{
-  position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-bottom: 0;
-background: rgba(0,0,0,0.4);
-display: none;
-}
-#MineInfo .time-choose .time-choose-wrap{
-  width: 3rem;
-height: 327px;
-background-color: white;
--webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-        border-radius: 10px;
-position: absolute;
-top: 0;
-right: 0;
-left: 0;
-bottom: 0;
-margin: auto;
-}
-#MineInfo .time-choose .time-choose-wrap .top{
-  height: 47px;
-    line-height: 47px;
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-#MineInfo .time-choose .time-choose-wrap .bottom{
-  position: absolute;
-bottom: 0;
-height: 55px;
-line-height: 55px;
-border-top: 1px solid #ddd;
-width: 100%;
-font-size: 18px;
-text-align: center;
-display: -webkit-box;
-/* OLD - iOS 6-, Safari 3.1-6 */
-display: -moz-box;
-/* OLD - Firefox 19- (buggy but mostly works) */
-display: -ms-flexbox;
-/* TWEENER - IE 10 */
-display: -webkit-flex;
-/* NEW - Chrome */
-display: flex;
-/* NEW, Spec - Opera 12.1, Firefox 20+ */
--webkit-justify-content: space-around;
--moz-justify-content: space-around;
--ms-justify-content: space-around;
--o-justify-content: space-around;
--ms-flex-pack: distribute;
-    justify-content: space-around;
--webkit-align-items: center;
--moz-align-items: center;
--ms-align-items: center;
--o-align-items: center;
--webkit-box-align: center;
-   -moz-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
-}
-#MineInfo .time-choose .time-choose-wrap .bottom span{
+#MineInfo .time-choose .time-choose-wrap .bottom span {
   height: 35px;
   width: 0.97rem;
   border: 1px solid #ffabc8;
   background-color: white;
   line-height: 35px;
   -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   color: #ffabc8;
 }
-#MineInfo .time-choose .time-choose-wrap .bottom .show{
-  color:white;
+
+#MineInfo .time-choose .time-choose-wrap .bottom .show {
+  color: white;
   background-color: #ffabc8
 }

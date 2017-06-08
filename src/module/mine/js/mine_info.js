@@ -1,7 +1,7 @@
-import { SubHeader, Content } from "./../../../public/public.js";
-import React, { Component } from "react"
-// import { Link } from "react-router-dom";
-import "./../css/mine_info.css"
+import { SubHeader, Content, Upimg } from "./../../../public/public.js";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./../css/mine_info.css";
 export default class MineInfo extends Component {
   render() {
     return (
@@ -15,78 +15,57 @@ export default class MineInfo extends Component {
   }
 }
 
+//create public structure
+const InfoNav = ({className, listName, avatar, getBirthday, name}) => (
+  <li className={className}>
+      <span>{listName}</span>
+      {avatar ? <img src="./../img/star1.png" alt="" /> :
+    <div>
+            {getBirthday ? <input placeholder="选择生日" id="getTime" /> : <span>{name}</span>}
+            <img className="jiantou" src="./../img/yule_jiantou.png" alt=""/>
+        </div>
+  }
+  </li>
+)
+//create MineInfoContent
 class MineInfoContent extends Component {
+  state = {
+    status: "uploader-wrap"
+  }
+  changeAvatar(){
+    
+  }
   render() {
     return (
       <div>
-    <div className="banner">
-      <ul className="banner-list">
-          <li className="list-head">
-              <span>头像</span>
-              <img src="./../img/star1.png" alt=""/>
-          </li>
-          <li className="list-name">
-              <span>昵称</span>
-              <div>
-                  <span>夏天的雪花</span>
-                  <img className="jiantou" src="./../img/yule_jiantou.png" alt=""/>
-              </div>
-          </li>
-          <li className="list-gender">
-              <span>性别</span>
-              <div>
-                  <span>男</span>
-                  <img className="jiantou" src="./../img/yule_jiantou.png" alt=""/>
-              </div>
-          </li>
-          <li className="list-signature">
-              <span>个性签名</span>
-              <div>
-                  <span>"年轻的时候"</span>
-                  <img className="jiantou" src="./../img/yule_jiantou.png" alt=""/>
-              </div>
-          </li>
-          <li className="list-birthday">
-              <span>生日</span>
-              <div>
-                  <input placeholder="选择生日" id="getTime" />
-                  <img className="jiantou" src="./../img/yule_jiantou.png" alt=""/>
-              </div>
-          </li>
-          <li className="list-location">
-              <span>我的地址</span>
-              <div>
-                  <span>北京市昌平区沙河</span>
-                  <img className="jiantou" src="./../img/yule_jiantou.png" alt=""/>
-              </div>
-          </li>
-          <li className="list-mailbox">
-              <span>邮箱</span>
-              <div>
-                  <span>494999197@qq.com</span>
-                  <img className="jiantou" src="./../img/yule_jiantou.png" alt=""/>
-              </div>
-          </li>
-      </ul>
-  </div>
-  <div className="uploader-wrap">
-          <div className="uploader-list">
-
-              <div className="file-wrap">
-                  拍照
-                  <input type="file" accept="image/*;capture=camcorder"/>
-                  { /* <!-- multiple多张上传属性 --> */ }
-              </div>
-
-              <div className="file-wrap">
-                  上传图片
-                  <input id="upload_image" type="file" accept="image/*;capture=camera"/>
-              </div>
-
-              <span className="close-send">取消</span>
-
-          </div>
+        <div className="banner">
+          <ul className="banner-list">
+              { /* 更改头像 */ }
+              <InfoNav className="list-head" listName="头像" avatar="true" />
+              { /* 更改昵称 */ }
+              <Link to={"/mine/name"}>
+                <InfoNav className="list-name" listName="昵称" name="夏天的雪花" />
+              </Link>
+              { /* 更改性别 */ }
+              <InfoNav className="list-gender" listName="性别" name="男" />
+              { /* 更改个性签名 */ }
+              <Link to={"/mine/signature"}>
+                <InfoNav className="list-signature" listName="个性签名" name="年轻的时候" />
+              </Link>
+              { /* 更改生日 */ }
+              <InfoNav className="list-birthday" listName="生日" getBirthday="true" />
+              { /* 更改我的地址 */ }
+              <Link to={"/mine/location"}>
+                <InfoNav className="list-location" listName="我的地址" name="北京市昌平区沙河" />
+              </Link>
+              { /* 更改邮箱 */ }
+              <Link to={"/mine/email"}>
+                <InfoNav className="list-mailbox" listName="邮箱" name="494999197@qq.com" />
+              </Link>
+          </ul>
       </div>
+      { /* 上传图片 */ }
+      <Upimg status={this.state.status}/>
   </div>
     )
   }
