@@ -4,6 +4,9 @@ import "./../css/new_detail.css";
 import fetch from "isomorphic-fetch";
 
 export default class NewDetail extends Component {
+  componentWillMount() {
+    console.log(this.props.location.pathname)
+  }
   render() {
     return (
       <div id="NewDetail">
@@ -31,13 +34,14 @@ class NewDetailContent extends Component {
     //   }
     // }).then(res => res)
     //   .then(data => console.log(data)).catch(e => console.error("Feach error", e));
-    fetch("https://api.myjson.com/bins/16gtop").then(res => res.json())
+    fetch("./../data/new.json")
+      .then(res => res.json())
       .then(data => {
         console.log(data.news);
         this.setState({
-          current: [1, 2, 2, 22]
-        })
-
+          current: this.props.params
+        });
+        console.log(this.state.current);
       })
       .catch(e => console.log("Fetch error", e));
   //let a = this.props.params.newsId;

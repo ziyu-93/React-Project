@@ -80,7 +80,7 @@ body {
   /*font-family: "微软雅黑"*/
 }
 
-#root, #page {
+#root, .page, .enterPage {
   height: 100%;
 }
 

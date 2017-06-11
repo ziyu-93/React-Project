@@ -11,16 +11,17 @@ const query = querystring.parse(window.location.search.slice(1));
 //console.log(window.location.search);
 const numberOfSlides = parseInt(query.slidesNum, 10) || 3;
 //parseInt (string,进制数2~32) 产生出来的整数，十位乘进制数，加上个位的数字。
-const paneNodes = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
-  return (
-    <Link key={i} to={"/new/" + (i * 1 + 1) + ""}><div className="swiper-slide"><img src="./img/brokeNew_loop.png" alt=""/></div></Link>
-  )
-});
-// const swipeSlide = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
-//   return (
-//     <span key={i}></span>
-//   )
-// });
+const paneNodes = Array.apply(null, Array(numberOfSlides))
+  .map((_, i) => {
+    return (
+      <Link key={i} to={"/new/" + (i * 1 + 1) + ""}><div className="swiper-slide"><img src="./img/brokeNew_loop.png" alt=""/></div></Link>
+    )
+  });
+  // const swipeSlide = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
+  //   return (
+  //     <span key={i}></span>
+  //   )
+  // });
 
 const startSlide = parseInt(query.startSlide, 10) || 0;
 
@@ -108,7 +109,8 @@ class NewContent extends Component {
     data: []
   }
   componentWillMount() {
-    fetch("./data/new.json").then(res => res.json())
+    fetch("./data/new.json")
+      .then(res => res.json())
       .then(data => this.setState({
         data: data.news
       }))
@@ -127,7 +129,7 @@ class NewContent extends Component {
                    <img src={e.img} alt=""/>
                </div>
                <div className="content-wrap">
-                   <p className="title">{e.title}</p>
+                   <p className="title chaochu_2">{e.title}</p>
                    <div className="content-wrap-bottom">
                        <span className="fans">粉丝吧提供</span>
                        <span className="time">{e.time}</span>

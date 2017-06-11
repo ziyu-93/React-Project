@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Content } from "./../../../public/public.js";
 import "./../css/star_search.css";
 import { Link } from "react-router-dom";
-
+import withRouter from "react-router";
 //create StarSearch
 export default class StarSearch extends Component {
   render() {

@@ -100,7 +100,7 @@ input:-ms-input-placeholder {
   color: #333;
 }
 
-#MineInfo .gender-choose {
+#MineInfo .gender-choose-hide, .gender-choose-show {
   position: absolute;
   top: 0;
   left: 0;
@@ -109,6 +109,10 @@ input:-ms-input-placeholder {
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 999;
+}
+
+#MineInfo .gender-choose-show {
+  display: block;
 }
 
 #MineInfo .gender-wrap {

@@ -1,11 +1,12 @@
 import { Header, Content, Logo } from "./../../../public/public.js";
-import React, { Component } from "react"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import "./../css/mine.css"
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./../css/mine.css";
 // import { findDOMNode } from "react-dom";
 import fetch from "isomorphic-fetch";
 // import createStore from 'redux';
 
+//create Mine
 export default class Mine extends Component {
   static defaultProps = {}
   render() {
@@ -22,15 +23,6 @@ export default class Mine extends Component {
   }
 }
 
-// const MineRoute = () => (
-//   <Router>
-//     <div>
-//       <Route exact path="/mine" component={Home}/>
-//       <Route path="/mine/info" component={About}/>
-//       <Route path="/mine/message" component={Topics}/>
-//     </div>
-//   </Router>
-// )
 class MineBg extends Component {
   componentWillMount() {
     function timeout(ms) {
@@ -38,9 +30,10 @@ class MineBg extends Component {
         setTimeout(resolve, ms, 'done');
       })
     }
-    timeout(2000).then((value) => {
-      console.log(value);
-    })
+    timeout(2000)
+      .then((value) => {
+        console.log(value);
+      })
     //Promise ajax 的一个封装
     let getJSON = function(url) {
       let promise = new Promise((resolve, reject) => {
@@ -64,9 +57,11 @@ class MineBg extends Component {
       })
       return promise;
     };
-    getJSON("./data.json").then(
-      json => console.log(json)
-    ).catch(error => console.log(error));
+    // getJSON("./data.json")
+    //   .then(
+    //     json => console.log(json)
+    // )
+    //   .catch(error => console.log(error));
 
     var p1 = new Promise(function(resolve, reject) {
       setTimeout(() => reject(new Error('fail')), 3000)
@@ -165,6 +160,7 @@ class MineBg extends Component {
     // const Counter = ({value}) => (
     //   <h1>{value}</h1>
     // )
+
     return (
       <div className="banner-top">
         { /* <Counter value="你好啊"></Counter> */ }
@@ -176,6 +172,7 @@ class MineBg extends Component {
         <div className="change-Bg-wrap">
           <img className="change-Bg" src="./img/切换背景.png" alt=""/></div>
         <div className="banner-top-shadow"></div>
+
       </div>
     )
   }
@@ -197,7 +194,8 @@ class MineContent extends Component {
     console.log(123);
   }
   componentWillMount() {
-    fetch("./data/data.json").then(res => res.json())
+    fetch("./data/data.json")
+      .then(res => res.json())
       .then(data => console.log(data.news))
       .catch(e => console.log("Fetch failed!", e))
   }
@@ -221,7 +219,7 @@ class MineContent extends Component {
           <Link to={"/mine/message"}>
             <NavList wrap="mine-info" icon="./img/mine_newinfo.png" title="我的消息" num="20"/>
           </Link>
-          <Link to={"/mine/infoName"}>
+          <Link to={"/mine/store"}>
             <NavList wrap="mine-store" icon="./img/mine_store.png" title="我的收藏"/>
           </Link>
             <NavList wrap="mine-send" icon="./img/mine_send.png" title="我的发布"/>

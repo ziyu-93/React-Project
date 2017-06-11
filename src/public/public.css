@@ -21,15 +21,16 @@
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid #ddd;
   padding: 0 13px;
   height: 100%;
   font-size: 16px;
+  border-bottom: 1px solid #ddd;
 }
 
 .header .item-wrap li {
   width: 20%;
   list-style: none;
+  height: 100%;
 }
 
 .header .item-wrap li .hide {
@@ -38,10 +39,43 @@
   color: black;
 }
 
-.header .item-wrap li .show {
+.banner-top-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.banner-top-nav .nav {
+  width: 22%;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  font-size: 18px;
+  color: #333;
+}
+
+
+/*.header .item-wrap li .show {
   color: #ffabc8;
   font-size: 16px;
-}
+  border-bottom: 4px solid #ffabc8;
+  display: block;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}*/
 
 .object-logo {
   display: -webkit-box;
@@ -182,6 +216,13 @@
   font-size: 16px;
 }
 
+.sub-header .sub-header-wrap span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 16px;
+}
+
 .looding-wrap {
   position: absolute;
   top: 0;
@@ -213,7 +254,7 @@
   right: 7px;
 }
 
-.uploader-wrap {
+.uploader-wrap-hide, .uploader-wrap-show {
   position: absolute;
   top: 0;
   left: 0;
@@ -222,6 +263,10 @@
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
   display: none;
+}
+
+.uploader-wrap-show {
+  display: block;
 }
 
 .uploader-list {

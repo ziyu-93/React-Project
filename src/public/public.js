@@ -1,21 +1,14 @@
-import React, {
-  Component
-} from "react";
-import {
-  Link
-} from "react-router-dom";
+import React, { Component } from "react";
+import { NavLink, Link } from "react-router-dom";
 import "./public.css";
 
 class Header extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   static defaultProps = {
     Arr: [
       "咨询", "有料", "明星汇", "娱乐", "我的"
     ],
-    user: [{
-      'path': '/new',
+    mainNav: [{
+      'path': '/',
       'name': '咨询'
     }, {
       'path': '/brokewall',
@@ -36,15 +29,23 @@ class Header extends Component {
       <div className="header">
         <ul className="item-wrap">
           {
-      this.props.user.map((e, i) => {
+      this.props.mainNav.map((e, i) => {
         return (
           <li key={i}>
-                  <Link to={e.path} className={this.props.current === i
+            <NavLink exact strict to={e.path}
+          activeStyle={{
+            color: '#ffabc8',
+            borderBottom: '4px solid #ffabc8',
+            display: 'block',
+            height: '100%',
+            boxSizing: 'border-box'
+          }}
+          className={this.props.current === i
             ? "show"
             : "hide"}>
-                      {e.name}
-                  </Link>
-                </li>
+                {e.name}
+            </NavLink>
+          </li>
         )
       })
       }
@@ -65,8 +66,8 @@ class Content extends Component {
           ? "44px"
           : "0"
       }}>
-                {this.props.children}
-            </div>
+        {this.props.children}
+    </div>
     )
   }
 }
@@ -102,10 +103,15 @@ const Logo = () => (
 //     )
 //   }
 // }
+
 class SubHeader extends Component {
   goBack() {
     window.history.go(-1);
     console.log("返回去咯");
+  }
+  save() {
+    console.log("保存");
+    window.location.href = "/mine/info";
   }
   render() {
     return (
@@ -113,6 +119,7 @@ class SubHeader extends Component {
           <div className="sub-header-wrap">
               <img className="sub-header-back" src="./../../img/back.png" alt="" onClick={() => this.goBack()}/>
               <p className="sub-header-text">{this.props.text}</p>
+            {this.props.right ? <span onClick={() => this.save()} className="store">保存</span> : ""}
           </div>
       </div>
     )
@@ -156,9 +163,9 @@ class ListLeft extends Component {
       this.props.ListLeft.map((e, i) => {
         return (
           <Link to={"/entertainment/" + this.props.listName + ""} key={i}>
-            <li className={this.state.show === e ? "banner-left-show banner-left-item" : "banner-left-item"} onClick={() => this.switchShow(i)}>
-                  <span>{e}</span>
-                </li></Link>
+                  <li className={this.state.show === e ? "banner-left-show banner-left-item" : "banner-left-item"} onClick={() => this.switchShow(i)}>
+                        <span>{e}</span>
+                      </li></Link>
         )
       })
       }
@@ -195,39 +202,71 @@ class ListRight extends Component {
     )
   }
 }
-//上传图片
-class Upimg extends Component {
+//mine store
+class MineStoreNav extends Component {
+  static defaultProps = {
+    mineStoreNav: [{
+      'path': "/mine/store",
+      'text': "图文"
+    }, {
+      'path': "/mine/store/video",
+      'text': "视频"
+    }, {
+      'path': "/mine/store/news",
+      'text': "咨询"
+    }]
+  }
   render() {
     return (
-      <div className={this.props.status}>
-          <div className="uploader-list bg">
-
-              <div className="file-wrap">
-                  拍照
-                  <input type="file" accept="image/*;capture=camcorder"/>
-                  { /* <!-- multiple多张上传属性 --> */ }
-              </div>
-
-              <div className="file-wrap">
-                  上传图片
-                  <input id="upload_image" type="file" accept="image/*;capture=camera"/>
-              </div>
-
-              <span className="close-send">取消</span>
-
-          </div>
-      </div>
+      <ul className="banner-top-nav">
+        {
+      this.props.mineStoreNav.map((e, i) => {
+        return (
+          <li key={i} ref="nav" className="nav"><NavLink exact strict to={e.path} activeStyle={{
+            borderBottom: '2px solid #ffabc8',
+            display: 'block',
+            height: '100%',
+            boxSizing: 'border-box'
+          }}>{e.text}</NavLink></li>
+        )
+      })
+      }
+      </ul>
     )
   }
 }
-export {
-  Header,
-  Bottom,
-  Content,
-  Logo,
-  SubHeader,
-  TitleNav,
-  ListLeft,
-  ListRight,
-  Upimg
-}
+//上传图片  由于this.props.state的值，不能在子组件内使用，也就是不能改变高等组件的props。
+// class Upimg extends Component {
+//   state = {
+//     boolean: this.props.boolean
+//   }
+//   closeSend() {
+//     this.setState({
+//       boolean: !this.state.boolean
+//     })
+//     console.log(1);
+//   }
+//   render() {
+//     return (
+//       <div className={this.props.boolean ? "uploader-wrap-show" : "uploader-wrap-hide"} ref="refName" >
+//           <div className="uploader-list bg">
+//
+//               <div className="file-wrap">
+//                   拍照
+//                   <input type="file" accept="image/*;capture=camcorder"/>
+//                   { /* <!-- multiple多张上传属性 --> */ }
+//               </div>
+//
+//               <div className="file-wrap">
+//                   上传图片
+//                   <input id="upload_image" type="file" accept="image/*;capture=camera"/>
+//               </div>
+//
+//               <span onClick={() => this.closeSend()} className="close-send">取消</span>
+//
+//           </div>
+//       </div>
+//     )
+//   }
+// }
+export { Header, Bottom, Content, Logo, SubHeader, TitleNav, ListLeft, ListRight, MineStoreNav }

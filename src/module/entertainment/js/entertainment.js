@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./../css/entertainment.css";
 // import { createStore } from 'redux';
 import querystring from "querystring";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ReactSwipe from 'react-swipe';
 import fetch from "isomorphic-fetch";
 
@@ -28,16 +28,17 @@ const query = querystring.parse(window.location.search.slice(1));
 
 const numberOfSlides = parseInt(query.slidesNum, 10) || 3;
 //parseInt (string,进制数2~32) 产生出来的整数，十位乘进制数，加上个位的数字。
-const paneNodes = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
-  return (
-    <Link key={i} to={"/new/2"}><div className="swiper-slide"><img src="./img/brokeNew_loop.png" alt=""/></div></Link>
-  )
-});
-// const swipeSlide = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
-//   return (
-//     <span key={i}></span>
-//   )
-// });
+const paneNodes = Array.apply(null, Array(numberOfSlides))
+  .map((_, i) => {
+    return (
+      <Link key={i} to={"/new/2"}><div className="swiper-slide"><img src="./img/brokeNew_loop.png" alt=""/></div></Link>
+    )
+  });
+  // const swipeSlide = Array.apply(null, Array(numberOfSlides)).map((_, i) => {
+  //   return (
+  //     <span key={i}></span>
+  //   )
+  // });
 
 const startSlide = parseInt(query.startSlide, 10) || 0;
 // const Con = ({num, onIncrement, onDecrement}) => (
@@ -168,10 +169,10 @@ class EntertainmentDetail extends Component {
       this.state.dataMovie.map((e, i) => {
         return (
           <li className="file-item" key={i}>
-                  <Link to={"/entertainment/movie/" + e.movieId + ""}><div className="placeholder"><img className="file-img" src={e.img} alt=""/></div>
-                  <p className="file-name chaochu_1">{e.name}</p>
-                  <p className="file-star chaochu_1">{e.star}</p></Link>
-              </li>
+              <Link to={"/entertainment/movie/" + e.movieId + ""}><div className="placeholder"><img className="file-img" src={e.img} alt=""/></div>
+              <p className="file-name chaochu_1">{e.name}</p>
+              <p className="file-star chaochu_1">{e.star}</p></Link>
+          </li>
         )
       })
       }
@@ -208,17 +209,16 @@ class EntertainmentDetail extends Component {
       this.state.dataTv.map((e, i) => {
         return (
           <li className="file-item" key={i}>
-                    <Link to={"/entertainment/tv/" + e.tvId + ""}><div className="placeholder"><img className="file-img" src={e.img} alt=""/></div>
-                    <p className="file-name chaochu_1">{e.name}</p>
-                    <p className="file-star chaochu_1">{e.star}</p></Link>
-                </li>
+              <Link to={"/entertainment/tv/" + e.tvId + ""}><div className="placeholder"><img className="file-img" src={e.img} alt=""/></div>
+              <p className="file-name chaochu_1">{e.name}</p>
+              <p className="file-star chaochu_1">{e.star}</p></Link>
+          </li>
         )
       })
       }
 
                   </ul>
               </div>
-
           </div>
       </div>
     )

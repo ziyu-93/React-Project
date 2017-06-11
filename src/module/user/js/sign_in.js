@@ -126,7 +126,7 @@ class SignInContent extends Component {
                 </div>
                 <div className="main-sign-up">
                     <a href="/user/sign_up"><span className="mg-r">立即注册</span></a>
-                    <a href="/new"><span className="col">闲逛一下~</span></a>
+                    <a href="/"><span className="col">闲逛一下~</span></a>
                 </div>
           </form>
                 <div className="main-bottom">

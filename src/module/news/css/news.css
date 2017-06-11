@@ -46,8 +46,9 @@
 }
 
 #news .NewContent .item .content-wrap .title {
-  font-size: 12px;
+  font-size: 14px;
   color: #333;
+  font-weight: 800;
 }
 
 #news .button-box {
