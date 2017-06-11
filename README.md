@@ -2,6 +2,8 @@
 
 The plugins used -- "react-router-dom","react-swipe","isomorphic-fetch" and many more
 
+[下载v0.0.1](https://github.com/ziyu-93/React-Project/archive/master.zip)
+
 ## Folder Structure
 
 After creation, your project should look like this:
