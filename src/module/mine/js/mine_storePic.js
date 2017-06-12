@@ -50,7 +50,7 @@ class MineStoreContentPic extends Component {
                                           <li className="img-num"><img className="item-wrap-img" src="./../img/brokeNew_luhan2.png" alt="" /></li>
                                       </ul>
                                   </div>
-                                  <Link to={"/new/1"}><span className="item-detail">点击查看详情</span></Link>
+                                  <Link to={"/brokewall/pic/1"}><span className="item-detail">点击查看详情</span></Link>
                               </div>
                           </div>
                       </div>

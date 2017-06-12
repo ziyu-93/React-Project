@@ -1,7 +1,14 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Link } from "react-router-dom";
 import "./public.css";
 
+import Mine from "./../module/mine/js/mine.js";
+import BrokeWall from "./../module/brokewall/js/brokewall.js";
+import News from "./../module/news/js/news.js";
+import Star from "./../module/star/js/star.js";
+import Entertainment from "./../module/entertainment/js/entertainment.js";
+
+//公共头部
 class Header extends Component {
   static defaultProps = {
     Arr: [
@@ -49,12 +56,33 @@ class Header extends Component {
         )
       })
       }
-          </ul>
+    </ul>
       </div>
     )
   }
 }
+const Basic = () => (
+  <Router>
+    <div className="header">
+      <ul className="item-wrap">
+        <li><Link to="/">咨询</Link></li>
+        <li><Link to="/brokewall">有料</Link></li>
+        <li><Link to="/star">明星汇</Link></li>
+        <li><Link to="/entertainment">娱乐</Link></li>
+        <li><Link to="/mine">我的</Link></li>
+      </ul>
+        <hr/>
 
+       <Route exact path="/" component={News}/>
+       <Route exact path="/mine" component={Mine}/>
+       <Route exact path="/entertainment" component={Entertainment}/>
+       <Route exact path="/star" component={Star}/>
+       <Route exact path="/brokewall" component={BrokeWall}/>
+    </div>
+  </Router>
+)
+
+//公共内容
 class Content extends Component {
   render() {
     return (
@@ -71,16 +99,19 @@ class Content extends Component {
     )
   }
 }
+
+//公共尾部
 class Bottom extends Component {
   render() {
     return (
       <div className="bottom">
-          <img className="bottom-left" src="./../img/new_detail_assess.png" alt=""/>
-          <img className="bottom-right" src="./../img/new_detail_zhuanfabt.png" alt=""/>
+          <img className="bottom-left" src="./../../img/new_detail_assess.png" alt=""/>
+          <img className="bottom-right" src="./../../img/new_detail_zhuanfabt.png" alt=""/>
       </div>
     )
   }
 }
+//公共logo
 const Logo = () => (
   <div className="object-logo">
       <img src="./img/logo.png" className="logo-img" alt=""/>
@@ -104,6 +135,7 @@ const Logo = () => (
 //   }
 // }
 
+//子页面头部
 class SubHeader extends Component {
   goBack() {
     window.history.go(-1);
@@ -125,7 +157,7 @@ class SubHeader extends Component {
     )
   }
 }
-//title and nav
+//我的收藏title and nav
 class TitleNav extends Component {
   render() {
     return (
@@ -269,4 +301,4 @@ class MineStoreNav extends Component {
 //     )
 //   }
 // }
-export { Header, Bottom, Content, Logo, SubHeader, TitleNav, ListLeft, ListRight, MineStoreNav }
+export { Header, Bottom, Content, Logo, SubHeader, TitleNav, ListLeft, ListRight, MineStoreNav, Basic }

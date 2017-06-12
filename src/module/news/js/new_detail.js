@@ -3,16 +3,27 @@ import { SubHeader, Content, Bottom } from "./../../../public/public.js";
 import "./../css/new_detail.css";
 import fetch from "isomorphic-fetch";
 
+
+//create NewDetail
 export default class NewDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: ""
+    }
+  }
   componentWillMount() {
-    console.log(this.props.location.pathname)
+    const newsId = this.props.location.pathname.lastIndexOf("/") + 1;
+    this.setState({
+      current: this.props.location.pathname.slice(newsId)
+    })
   }
   render() {
     return (
       <div id="NewDetail">
       <SubHeader text={"咨询详情"}/>
       <Content haveTop={false} haveBottom={true}>
-        <NewDetailContent/>
+        <NewDetailContent current={this.state.current}/>
       </Content>
     <Bottom/>
   </div>
@@ -20,9 +31,22 @@ export default class NewDetail extends Component {
   }
 }
 
+//create NewDetailContent
 class NewDetailContent extends Component {
-  state = {
-    current: ""
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: this.props.current,
+      currentList: []
+    }
+  }
+  changeIconStore(e) {
+    console.log(e.target.src);
+    e.target.src === "http://localhost:3000/img/new_detail_shoucang_0.png" ? e.target.src = "http://localhost:3000/img/new_detail_shoucang.png" : e.target.src = "http://localhost:3000/img/new_detail_shoucang_0.png"
+  }
+  changeIconZan(e) {
+    console.log(e.target.src);
+    e.target.src === "http://localhost:3000/img/new_detail_zan_0.png" ? e.target.src = "http://localhost:3000/img/new_detail_zan.png" : e.target.src = "http://localhost:3000/img/new_detail_zan_0.png"
   }
   componentWillMount() {
     // fetch('https://github.com/ziyu-93/React-Project/blob/master/data/new.json', {
@@ -34,26 +58,34 @@ class NewDetailContent extends Component {
     //   }
     // }).then(res => res)
     //   .then(data => console.log(data)).catch(e => console.error("Feach error", e));
+    console.log(this.props.current);
     fetch("./../data/new.json")
       .then(res => res.json())
       .then(data => {
-        console.log(data.news);
-        this.setState({
-          current: this.props.params
-        });
-        console.log(this.state.current);
+        //for
+        for (var i in data.news) {
+          data.news[i].newsId === this.state.current ?
+            this.setState({
+              currentList: data.news[i]
+            }) : [];
+        // console.log(data.news[i].title);
+        // console.log(data.news[i].newsId);
+        }
+        console.log(this.state.currentList);
       })
       .catch(e => console.log("Fetch error", e));
-  //let a = this.props.params.newsId;
+      //循环遍历
+
   }
 
   render() {
+    const {currentList} = this.state;
     return (
       <div className="banner">
-      <div className="banner-top">
+        <div className="banner-top">
             <div className="top-wrap">
-                <p className="top-title">百老汇明星担纲评委 “邻家舞王”诞生！</p>
-                <span className="top-date">2017-1-18</span>
+                <p className="top-title">{currentList.title}</p>
+                <span className="top-date">{currentList.time}</span>
                 <span className="top-text">粉丝吧提供</span>
             </div>
             <div className="top-content">
@@ -71,9 +103,9 @@ class NewDetailContent extends Component {
                     </p>
                 </div>
                 <div className="content-assess">
-                    <img className="store" src="./../img/new_detail_shoucang_0.png" alt=""/>
+                    <img onClick={(e) => this.changeIconStore(e)} className="store" src="./../img/new_detail_shoucang_0.png" alt=""/>
 
-                    <img className="zan" src="./../img/new_detail_zan_0.png" alt=""/>
+                    <img  onClick={(e) => this.changeIconZan(e)} className="zan" src="./../img/new_detail_zan_0.png" alt=""/>
                 </div>
             </div>
 

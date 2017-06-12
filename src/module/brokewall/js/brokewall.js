@@ -7,7 +7,9 @@ import ReactSwipe from "react-swipe";
 import PropTypes from "prop-types";
 import fetch from 'isomorphic-fetch';
 export default class BrokeWall extends Component {
-  static defaultProps = {}
+  static defaultProps = {
+
+  }
   render() {
     return (
       <div id="brokewall">
@@ -22,11 +24,12 @@ export default class BrokeWall extends Component {
   }
 }
 
-const swipeChild = Array.apply(null, Array(3)).map((_, i) => {
-  return (<div className="swiper-slide" key={i}>
+const swipeChild = Array.apply(null, Array(3))
+  .map((_, i) => {
+    return (<div className="swiper-slide" key={i}>
       <img src="./img/brokeNew_loop.png" alt=""/>
     </div>)
-});
+  });
 
 class Swiper extends Component {
   static propTypes = {
@@ -194,7 +197,7 @@ class BrokeWallPic extends Component {
           }
                                   </ul>
                             </div>
-                            <Link to={`/brokewall/${e.picId}`}><span className="item-date">点击查看详情</span></Link>
+                            <Link to={`/brokewall/pic/${e.picId}`}><span className="item-date">点击查看详情</span></Link>
                         </div>
                     </div>
                 </div>
@@ -213,10 +216,14 @@ class BrokeWallVideo extends Component {
     videoList: []
   }
   componentWillMount() {
-    fetch("./data/circle.json").then(res => res.json())
-      .then(data => this.setState({
-        videoList: data.circleVideo
-      }))
+    fetch("./data/circle.json")
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          videoList: data.circleVideo
+        })
+        console.log(data.circleVideo);
+      })
       .catch(e => console.log("Feach error", e));
   }
   render() {
@@ -244,7 +251,7 @@ class BrokeWallVideo extends Component {
                                     <div className="item-wrap">
                                         <video src="" poster={e.img}></video>
 
-                                        <Link to={'/brokewall/' + e.videoId + ''}><span className="item-date">点击查看详情</span></Link>
+                                        <Link to={`/brokewall/video/${e.videoId}`}><span className="item-date">点击查看详情</span></Link>
                                     </div>
 
                                 </div>

@@ -26,7 +26,7 @@ class MineStoreContentNews extends Component {
     data: []
   }
   componentWillMount() {
-    fetch("https://api.myjson.com/bins/nlfij")
+    fetch("./../../data/new.json")
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -45,7 +45,7 @@ class MineStoreContentNews extends Component {
             {
       data.map((e, i) => {
         return (
-          <li className="content-info-item" key={i}>
+          <Link to={`/new/${e.newsId}`} key={i}><li className="content-info-item" >
               <h5 className="item-title">{e.time}</h5>
               <div className="item-content">
                   <div className="content-left">
@@ -56,7 +56,7 @@ class MineStoreContentNews extends Component {
                       <p>{e.article}</p>
                   </div>
               </div>
-          </li>
+          </li></Link>
         )
       })
       }

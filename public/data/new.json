@@ -1,51 +1,65 @@
 {
   "news": [{
-      "img": "./img/brokeNew_loop.png",
+      "img": "./../../img/brokeNew_loop.png",
+      "title": "百老汇明星担任评委“邻家舞王”诞生！",
+      "time": "2017-02-16",
+      "newsId": "0",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
+    }, {
+      "img": "./../../img/brokeNew_loop.png",
       "title": "张艺兴暖心照顾陈都灵 贴心为她拿剧本 “盐甜cp”戏里戏外都甜齁",
       "time": "2017-03-16",
-      "newsId": "1"
+      "newsId": "1",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     },
     {
-      "img": "./img/brokeNew_bannder.png",
+      "img": "./../../img/brokeNew_bannder.png",
       "title": "吴亦凡究竟有多帅？看这些路人毫不掩饰的花痴表情就知道了",
       "time": "2017-05-09",
-      "newsId": "2"
+      "newsId": "2",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     },
     {
-      "img": "./img/brokeNew_loop.png",
+      "img": "./../../img/z向往的生活2.png",
       "title": "央视点评鲜肉：表扬鹿晗井柏然，看好黄子韬黄轩，提醒吴亦凡AB",
       "time": "2017-04-23",
-      "newsId": "4"
+      "newsId": "4",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     },
     {
-      "img": "./img/brokeNew_bannder.png",
+      "img": "./../../img/brokeNew_bannder.png",
       "title": "王思聪吴亦凡三亚共度春节，网友调侃下次带上林更新，别让他孤单",
       "time": "2017-01-19",
-      "newsId": "7"
+      "newsId": "7",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     },
     {
-      "img": "./img/brokeNew_loop.png",
+      "img": "./../../img/brokeNew_loop.png",
       "title": "加入外国国籍的6大明星，刘亦菲吴亦凡张铁林在列！",
       "time": "2017-02-12",
-      "newsId": "9"
+      "newsId": "9",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     },
     {
-      "img": "./img/brokeNew_loop.png",
+      "img": "./../../img/brokeNew_loop.png",
       "title": "徐静蕾剃光头 颜值高的都开始用光头证明自己了",
       "time": "2017-04-23",
-      "newsId": "11"
+      "newsId": "11",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     },
     {
-      "img": "./img/brokeNew_bannder.png",
+      "img": "./../../img/brokeNew_bannder.png",
       "title": "《西游伏妖篇》上映五日破十亿  “爱福游”全国路演再启程",
       "time": "2017-01-19",
-      "newsId": "13"
+      "newsId": "13",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     },
     {
-      "img": "./img/brokeNew_loop.png",
+      "img": "./../../img/brokeNew_loop.png",
       "title": "网友评演技最烂男星，吴亦凡第五，李易峰第三，陈学冬第一",
       "time": "2017-02-12",
-      "newsId": "14"
+      "newsId": "14",
+      "article": "日鱼人月日晚，由北京国际广告传媒集团主办的首届“寻找邻家舞王”在此诞生！北京国际广告传媒集团主办的首届“寻"
     }
   ]
 }

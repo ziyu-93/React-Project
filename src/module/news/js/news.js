@@ -1,4 +1,4 @@
-import { Header, Content, Logo } from "./../../../public/public.js";
+import { Header, Content, Logo, Basic } from "./../../../public/public.js";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import Swiper from "react-swiper"
@@ -6,7 +6,6 @@ import ReactSwipe from 'react-swipe';
 import "./../css/news.css";
 import querystring from "querystring";
 import fetch from "isomorphic-fetch";
-
 const query = querystring.parse(window.location.search.slice(1));
 //console.log(window.location.search);
 const numberOfSlides = parseInt(query.slidesNum, 10) || 3;
@@ -145,3 +144,13 @@ class NewContent extends Component {
       );
   }
 }
+// const NewsRouter = () => (
+//   <Router>
+//     <div>
+//       <Switch>
+//         <Route path="/" component={News}/>
+//         <Route path="/new/:newsId" component={NewDetail}/>
+//       </Switch>
+//     </div>
+//   </Router>
+// )

@@ -3,8 +3,8 @@ import { SubHeader, Content, Bottom } from "./../../../public/public.js";
 import "./../css/brokewallPic.css";
 import fetch from "isomorphic-fetch";
 
-//create BrokePic
-export default class BrokePic extends Component {
+//create BrokeVideo
+export default class BrokeVideo extends Component {
   state = {
     current: ""
   }
@@ -18,9 +18,9 @@ export default class BrokePic extends Component {
   render() {
     return (
       <section id="BrokePic">
-          <SubHeader text={"图文详情"}/>
+          <SubHeader text={"视频详情"}/>
           <Content haveTop={false} haveBottom={true}>
-            <BrokePicContent current={this.state.current}/>
+            <BrokeVideoContent current={this.state.current}/>
           </Content>
           <Bottom/>
       </section>
@@ -28,8 +28,8 @@ export default class BrokePic extends Component {
   }
 }
 
-//create BrokePicContent
-class BrokePicContent extends Component {
+//create BrokeVideoContent
+class BrokeVideoContent extends Component {
   state = {
     current: this.props.current,
     currentList: [],
@@ -48,12 +48,12 @@ class BrokePicContent extends Component {
     fetch("./../../data/circle.json")
       .then(res => res.json())
       .then(data => {
-        console.log(data.circlePic);
-        for (var i in data.circlePic) {
-          data.circlePic[i].picId === this.state.current ?
+        console.log(data.circleVideo);
+        for (var i in data.circleVideo) {
+          data.circleVideo[i].videoId === this.state.current ?
             this.setState({
-              currentList: data.circlePic[i],
-              imgList: data.circlePic[i].img
+              currentList: data.circleVideo[i],
+              imgList: data.circleVideo[i].img
             }) : []
         }
       })
@@ -85,21 +85,11 @@ class BrokePicContent extends Component {
                           <p className="item-text">{currentList.contentText}</p>
                           <div className="item-wrap">
                               <div className="item-reply">
-                                  <ul className="img-list">
-      {
-      imgList.length > 1 ? imgList.map((e, i) => {
-        return (
-          <li key={i} className="img-num"><img className="item-wrap-img" src={e} alt=""/></li>
-        )
-      }) : imgList.map((e, i) => {
-        return (
-          <li key={i} className="img-one"><img className="item-wrap-img" src={e} alt=""/></li>
-        )
-      })
-      }
-                                    </ul>
+                                <video src="" poster={currentList.img}>
+
+                                </video>
                               </div>
-                              <span className="item-date">点击图片查看大图<span>{currentList.time}</span></span>
+                              <span className="item-date">{currentList.time}</span>
                           </div>
                       </div>
                   </div>

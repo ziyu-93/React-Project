@@ -75,7 +75,8 @@ class SignInContent extends Component {
   signIn() {
     let {number, psword} = this.state;
     if (number === "18247184313" && psword === "123456") {
-      window.location.href = "/new";
+      alert("登录成功");
+      window.location.href = "/";
     } else if (number === "" && psword === "") {
       alert("请输入账号密码");
     } else if (number === "" && psword !== "") {

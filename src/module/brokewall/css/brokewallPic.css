@@ -1,426 +1,439 @@
 #BrokePic .banner {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    overflow-y: scroll;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow-y: scroll;
+  bottom: 0;
 }
 
 #BrokePic .banner-top {
-    padding: 24px 13px;
-    border-bottom: 1px solid #ddd;
+  padding: 24px 13px;
+  border-bottom: 1px solid #ddd;
 }
 
 #BrokePic .banner-top .left-item {
-    padding: 15px 0.111rem 14px;
-    border-bottom: 1px solid #ddd;
-    position: relative;
+  padding: 15px 0.111rem 14px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 
 #BrokePic .banner-top .item-top {
-    width: 100%;
+  width: 100%;
 }
 
 #BrokePic .banner-top .item-info {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
 #BrokePic .banner-top .logo-wrap {
-    margin-right: .103rem;
-    width: 50px;
-    height: 50px;
+  margin-right: .103rem;
+  width: 50px;
+  height: 50px;
 }
 
 #BrokePic .banner-top .item-logo {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    width: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 100%;
 }
 
 #BrokePic .banner-top .item-title {
-    font-size: 16px;
-    color: #333;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
 }
 
 #BrokePic .banner-top .item-name {
-    margin-right: 0.128rem;
+  margin-right: 0.128rem;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 #BrokePic .banner-top .item-grade {
-    background: #ffac67;
-    padding: 1px 6px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: white;
-    font-size: 12px;
-    height: 18px;
-    line-height: 18px;
-    margin-top: 2px;
-    float: right;
+  background: #ffac67;
+  padding: 1px 6px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  margin-top: 2px;
+  float: right;
 }
 
 #BrokePic .banner-top .item-right-top .item-floor {
-    font-size: 12px;
-    color: #999;
-    display: block;
+  font-size: 12px;
+  color: #999;
+  display: block;
 }
 
 #BrokePic .banner-top .item-text-wrap {
-    width: 100%;
-    padding: 0 20px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 #BrokePic .banner-top .item-text {
-    font-size: 14px;
-    margin-bottom: 10px;
-    line-height: 14px;
-    display: inline-block
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 14px;
+  display: inline-block;
 }
 
 #BrokePic .banner-top .right-list-wrap {
-    font-size: 12px;
-    width: 100%
+  font-size: 12px;
+  width: 100%
 }
 
 #BrokePic .banner-top .img-list {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -o-flex-wrap: wrap;
-    flex-wrap: wrap;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 #BrokePic .banner-top .img-list .img-num {
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    width: 33%;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  width: 33%;
 }
 
 #BrokePic .banner-top .img-list li:nth-of-type(3n) {
-    border-right: 0;
+  border-right: 0;
 }
 
 #BrokePic .banner-top .img-list .one-li {
-    width: 100%;
+  width: 100%;
 }
 
 #BrokePic .banner-top .img-list li:nth-of-type(3) {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 #BrokePic .banner-top .item-wrap .item-wrap-img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#BrokePic .banner-top .item-wrap video {
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+  display: block;
 }
 
 #BrokePic .banner-top .item-date {
-    color: #999;
-    font-size: 12px;
-    display: block;
-    margin-top: 14px
+  color: #999;
+  font-size: 12px;
+  display: block;
+  margin-top: 14px
 }
 
 #BrokePic .banner-top .item-date span {
-    float: right;
+  float: right;
 }
 
 #BrokePic .banner-top .item-right-top {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -o-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-align-items: flex-start;
-    -moz-align-items: flex-start;
-    -ms-align-items: flex-start;
-    -o-align-items: flex-start;
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    height: 50px;
-    margin-bottom: 14px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  height: 50px;
+  margin-bottom: 14px;
+  width: 2.3rem;
 }
 
 #BrokePic .banner-top .content-assess {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    -o-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin: 20px 19px 0;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 20px 19px 0;
 }
 
 #BrokePic .banner-top .content-assess img {
-    width: 28px;
+  width: 28px;
 }
 
 #BrokePic .banner-bottom .banner-title-wrap {
-    border-bottom: 1px solid #ddd;
-    padding: 0 13px
+  border-bottom: 1px solid #ddd;
+  padding: 0 13px
 }
 
 #BrokePic .banner-bottom .banner-title {
-    margin: 4px 0;
-    border-left: 3px solid #FFabc8;
-    height: 36px;
+  margin: 4px 0;
+  border-left: 3px solid #FFabc8;
+  height: 36px;
 }
 
 #BrokePic .banner-bottom .banner-title-text {
-    font-size: 16px;
-    color: #333;
-    padding: 4px 0 4px 13px;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -o-justify-content: space-between;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    height: 100%;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  font-size: 16px;
+  color: #333;
+  padding: 4px 0 4px 13px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #BrokePic .banner-bottom .comment-item {
-    padding: 15px 0.111rem 18px;
-    border-bottom: 1px solid #ddd;
-    position: relative;
+  padding: 15px 0.111rem 18px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
 }
 
 #BrokePic .banner-bottom .comment-item .reply-button {
-    width: 45px;
-    position: absolute;
-    top: 15px;
-    right: .111rem;
+  width: 45px;
+  position: absolute;
+  top: 15px;
+  right: .111rem;
 }
 
 #BrokePic .banner-bottom .item-top {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    width: 100%;
-    -webkit-justify-content: flex-start;
-    -moz-justify-content: flex-start;
-    -ms-justify-content: flex-start;
-    -o-justify-content: flex-start;
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  width: 100%;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 #BrokePic .banner-bottom .logo-wrap {
-    width: 48px;
-    height: 48px;
-    margin-right: .103rem;
+  width: 48px;
+  height: 48px;
+  margin-right: .103rem;
 }
 
 #BrokePic .banner-bottom .item-logo {
-    width: 100%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+  width: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 #BrokePic .banner-bottom .item-title {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 #BrokePic .banner-bottom .item-title .item-name {
-    margin-right: .153rem;
+  margin-right: .153rem;
 }
 
 #BrokePic .banner-bottom .item-right-top {
-    margin-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 #BrokePic .banner-bottom .item-right-top .item-floor {
-    font-size: 12px;
-    color: #638EFF;
-    display: block;
+  font-size: 12px;
+  color: #638EFF;
+  display: block;
 }
 
 #BrokePic .banner-bottom .item-text-wrap {
-    width: 1.92rem;
+  width: 1.92rem;
 }
 
 #BrokePic .banner-bottom .item-text {
-    font-size: 14px;
-    margin-bottom: 6px;
-    line-height: 14px;
-    display: inline-block
+  font-size: 14px;
+  margin-bottom: 6px;
+  line-height: 14px;
+  display: inline-block
 }
 
 #BrokePic .banner-bottom .item-wrap {
-    font-size: 12px;
-    padding-left: .111rem;
-    width: 100%
+  font-size: 12px;
+  padding-left: .111rem;
+  width: 100%
 }
 
 #BrokePic .banner-bottom .item-wrap .item-wrap-img {
-    margin-left: 5px
+  margin-left: 5px
 }
 
 #BrokePic .banner-bottom .item-reply {
-    background-color: #f2f2f3;
-    margin-top: -4px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+  background-color: #f2f2f3;
+  margin-top: -4px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 #BrokePic .banner-bottom .item-reply ul {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #BrokePic .banner-bottom .item-reply-text {
-    padding: 0 0 10px 13px;
+  padding: 0 0 10px 13px;
 }
 
 #BrokePic .banner-bottom .item-reply-more {
-    padding-bottom: 10px;
-    text-align: center;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 #BrokePic .banner-bottom .item-reply-more a {
-    color: #3D6Bf0;
+  color: #3D6Bf0;
 }
 
 #BrokePic .banner-bottom .item-reply-text:nth-of-type(1) {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 #BrokePic .banner-bottom .reply-key {
-    color: #3D6Bf0;
-    margin-right: 5px;
-    letter-spacing: 2px;
+  color: #3D6Bf0;
+  margin-right: 5px;
+  letter-spacing: 2px;
 }
 
 #BrokePic .banner-bottom .reply-value {
-    color: #999;
+  color: #999;
 }
 
 #BrokePic .banner-bottom .item-date {
-    color: #ccc;
-    font-size: 12px;
-    display: block;
-    margin-top: 19px
+  color: #ccc;
+  font-size: 12px;
+  display: block;
+  margin-top: 19px
 }
 
 #BrokePic .banner-bottom .item-title .item-grade {
-    background: #ffac67;
-    padding: 0px 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: white;
-    font-size: 12px;
+  background: #ffac67;
+  padding: 0px 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
 }
 
-
 #BrokePic .bigImg-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: 999;
-    display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 999;
+  display: none;
 }
 
 #BrokePic .bigImg-wrap img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }

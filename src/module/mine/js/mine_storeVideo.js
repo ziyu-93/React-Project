@@ -44,7 +44,7 @@ class MineStoreContentVideo extends Component {
                                   <div className="item-reply">
                                       <video src="" poster="./../../img/brokeNew_loop.png"></video>
                                   </div>
-                                  <Link to={"/brokewall/1"}><span className="item-detail">点击查看详情</span></Link>
+                                  <Link to={"/brokewall/video/1"}><span className="item-detail">点击查看详情</span></Link>
                               </div>
                           </div>
                       </div>
